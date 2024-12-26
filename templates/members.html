@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Members Management</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Members Management</h1>
+
+        <!-- Form to add a new member -->
+        <form action="/members" method="POST">
+            <input type="text" name="name" placeholder="Member Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">Add Member</button>
+        </form>
+
+        <h2>All Members</h2>
+
+        <!-- Table displaying all members -->
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Join Date</th>
+                    <th>Actions</th>
+                    <th>Borrowed Books</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for member in members %}
+                <tr>
+                    <td>{{ member.id }}</td>
+                    <td>{{ member.name }}</td>
+                    <td>{{ member.email }}</td>
+                    <td>{{ member.join_date.strftime('%Y-%m-%d') }}</td>
+                    <td>
+                        <a href="/members/update/{{ member.id }}">Edit</a>
+                        <a href="/members/delete/{{ member.id }}" onclick="return confirm('Are you sure?');">Delete</a>
+                    </td>
+                    <td>
+                        <a href="/members/{{ member.id }}/borrowed_books">View Borrowed Books</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Button to go back to the home page -->
+        <form action="/" method="get">
+            <button type="submit">Back to Home</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Books Management</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Books Management</h1>
+        <form action="/books" method="POST">
+            <input type="text" name="title" placeholder="Book Title" required>
+            <input type="text" name="author" placeholder="Author" required>
+            <input type="text" name="genre" placeholder="Genre" required>
+            <input type="number" name="year" placeholder="Year (optional)">
+            <button type="submit">Add Book</button>
+        </form>
+        
+        <h2><b>Search Book</b></h2>
+        <form action="/books/search" method="GET">
+            <input type="text" name="query" placeholder="Search by Title or ID" required>
+            <button type="submit">Search</button>
+        </form>
+
+        <h2>All Books</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Genre</th>
+                    <th>Year</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in books %}
+                <tr>
+                    <td>{{ book.id }}</td>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.genre }}</td>
+                    <td>{{ book.year }}</td>
+                    <td>
+                        <a href="/books/update/{{ book.id }}">Edit</a>
+                        <a href="/books/delete/{{ book.id }}" onclick="return confirm('Are you sure?');">Delete</a>
+                        <a href="/books/borrow/{{ book.id }}">Borrow</a>
+                        <a href="/books/return/{{ book.id }}">Return</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <br>
+        <form action="/" method="get">
+            <button type="submit">Back to Home</button>
+        </form>
+    </div>
+</body>
+</html>
