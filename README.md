@@ -28,15 +28,20 @@ cd library-management-system
 
 ### Step 3: Install the Required Dependencies
 Create a virtual environment (optional but recommended) and install the dependencies:
+
 python -m venv venv
+
 source venv/bin/activate   # For macOS/Linux
+
 venv\Scripts\activate      # For Windows
 
 ### Step 4: Then install the required dependencies:
+
 pip install -r requirements.txt
 
-###Step 5: Run the Flask Application
+### Step 5: Run the Flask Application
 Run the following command to start the Flask server:
+
 python app.py
 
 ## Images
