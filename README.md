@@ -39,7 +39,7 @@ Step 5: Run the Flask Application
 Run the following command to start the Flask server:
 python app.py
 
-Images
+##Images
 
 homepage:
 ![Library Management System Screenshot](images/homepage.png)
