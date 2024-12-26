@@ -63,7 +63,7 @@ Update Member Page:
 ![Library Management System Screenshot](images/updatemember.png)
 
 Borrowed books list By members:
-![Library Management System Screenshot](images/borrowedbooklist.png)
+![Library Management System Screenshot](images/Borrowedbookslist.png)
 
 
 
