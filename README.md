@@ -1,6 +1,6 @@
 # Library Management System
 
-This is a Library Management System built using Python and Flask. It allows users to manage books, members, and book loans. The system supports operations such as adding, updating, deleting books and members, as well as borrowing and returning books.
+This is a Library Management System built using Python and Flask. It allows users to manage books, members, and book loans. The system supports operations such as adding, updating, searching, deleting books and members, as well as borrowing and returning books.
 
 ## Features
 - **Books Management**: Add, update, delete, and search books.
