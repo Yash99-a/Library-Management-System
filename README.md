@@ -41,13 +41,13 @@ python app.py
 
 ##Images
 homepage:
-![Library Management System Screenshot](images/home_page.png)
+![Library Management System Screenshot](images/homepage.png)
 
 Books Page:
 ![Library Management System Screenshot](images/books.png)
 
 Update Book  Page:
-![Library Management System Screenshot](images/update_book.png)
+![Library Management System Screenshot](images/updatebook.png)
 
 Search Page:
 ![Library Management System Screenshot](images/search.png)
@@ -59,10 +59,10 @@ Members:
 ![Library Management System Screenshot](images/members.png)
 
 Update Member Page:
-![Library Management System Screenshot](images/update_member.png)
+![Library Management System Screenshot](images/updatemember.png)
 
 Borrowed books list By members:
-![Library Management System Screenshot](images/borrowed_book_list.png)
+![Library Management System Screenshot](images/borrowedbooklist.png)
 
 
 
